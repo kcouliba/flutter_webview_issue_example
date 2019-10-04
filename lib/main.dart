@@ -71,7 +71,8 @@ class _WebViewPageState extends State<WebViewPage> {
     await runZoned(() async {
       final HttpServer server =
           await HttpServer.bind(InternetAddress.loopbackIPv4, 3000);
-      final String initialUrl = 'http://${server.address.host}:${server.port}/';
+      final String initialUrl =
+          'http://${server.address.host}:${server.port}/index.html';
 
       setState(() {
         _server = server;
