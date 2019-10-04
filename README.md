@@ -12,10 +12,12 @@ From that server, we render a static html page containing an iframe.
 
 At that point, the structure is as follows :
 
-. (Documents - application root directory)
+```
+/ (Documents - application root directory)
 |-- www
-|--|-- index.html
-|--|-- archive (uncompressed)
+    |-- index.html
+    |-- archive (uncompressed)
+```
 
 The index.html file mainly contains an iframe targeting a page within the /www/archive (e.g: http://127.0.0.1:3000/archive/index.html) and some javascript code, enabling the page referenced by the iframe to run.
 
