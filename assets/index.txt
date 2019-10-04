@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,viewport-fit=cover" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{title}</title>
+    <style>
+      html, body {
+        height: 99vh;
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        overflow: hidden;
+      }
+
+      .container1 {
+          width: 100vw;
+          height: 100vh;
+          max-width: 100%;
+          max-height: 100%;
+      }
+
+      .container2,
+      .container2 iframe {
+          width: 100%;
+          height: 100%;
+          
+          margin: 0 !important;
+          padding: 0 !important;
+          box-sizing: border-box;
+      }
+
+      .scroll {
+          overflow: scroll !important;
+          -webkit-overflow-scrolling: touch !important;
+      }
+
+      /*
+        Some RWD pages (let's say with "incomplete RWD") are experiencing iframe overflow (iframe does not fit into the iframe-container).
+        Unfortunately, we can't fix that from the iframe outside and to solve this issue, document inside iframe requires at least:
+
+        body {
+            max-width: 100vw !important;
+        }
+      */
+
+      /* Resolving iframe and container double scrollbars on desktop browsers (rather obligatory) */
+
+      .no-scrollbar {
+          position: relative;
+      }
+
+      .no-scrollbar iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+      }
+
+      .no-scrollbar {
+          /* Hide scrollbars in IE Edge */
+          /* Autohiding is needed inside iframe document */
+          /*-ms-overflow-style: -ms-autohiding-scrollbar;*/
+          /* In the parent iframe container we don't want any scrollbars */
+          -ms-overflow-style: none;
+      }
+
+      /* DEBUG */
+
+      /* To receive click events on iOS */
+      /*
+      * {
+          cursor: pointer;    
+      }
+      
+      .container1 {
+          border: 1px green dotted;
+      }
+
+      .container2 {
+          border: 1px blue dotted;
+      }
+
+      iframe {
+          border: 1px red dotted;
+      }
+      */
+    </style>    
+    <script>
+      var API_1484_11 = {}
+
+      API_1484_11.Initialize = function(param = '') {}
+      API_1484_11.Commit = function(param = '') {}
+      API_1484_11.Terminate = function(param = '') {}
+      API_1484_11.SetValue = function(cmiKey, value) {}
+      API_1484_11.GetValue = function(cmiKey) {}
+      API_1484_11.GetLastError = function() {}
+      API_1484_11.GetErrorString = function(errorCode = 0) {}
+      API_1484_11.GetDiagnostic = function(errorCode = 0) {}
+
+      window.API_1484_11 = API_1484_11
+    </script>
+  </head>
+  <body>
+    <div class="container1">
+        <div class="container2 scroll no-scrollbar">
+            <iframe src="http://127.0.0.1:3000/archive/index_lms.html"></iframe>
+        </div>
+    </div>
+  </body>
+</html>
