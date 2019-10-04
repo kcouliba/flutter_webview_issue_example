@@ -43,3 +43,5 @@ It is actually possible to make the expected behavior happen following these ins
 3. The start page should be still available. Now you can press the play button.
 
 After executing these steps, you should be able to play the media as expected
+
+On a physical platform, the fullscreen page doesn't show, but the behavior remains the same. You have to press anywhere on screen before hitting the play button to expected the media to be played properly.
