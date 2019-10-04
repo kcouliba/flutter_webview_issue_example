@@ -21,13 +21,13 @@ At that point, the structure is as follows :
 
 The index.html file mainly contains an iframe targeting a page within the /www/archive (e.g: http://127.0.0.1:3000/archive/index.html) and some javascript code, enabling the page referenced by the iframe to run.
 
-## The expected behaviour
+## The expected behavior
 
 1. The webview should display the referenced content (a page, with a play button)
 2. When the play button is pressed, the media image is shown
 3. When the media image is pressed, the media is displayed
 
-## The encountered behaviour
+## The encountered behavior
 
 1. The webview displays the referenced content (a page, with a play button)
 2. When the play button is pressed, a fullscreen interaction is triggered, no media is displayed
@@ -36,7 +36,7 @@ We can close the me fullscreen but, the media image is not displayed, and it is 
 
 ## Workaround
 
-It is actually possible to make the expected behaviour happen following these instructions.
+It is actually possible to make the expected behavior happen following these instructions.
 
 1. When the page with the play button is displayed, press anywhere on screen, but avoid that button.
 2. The fullscreen should be triggered. Close the fullscreen.
