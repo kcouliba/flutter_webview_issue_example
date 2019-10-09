@@ -1,6 +1,6 @@
 # Flutter WebView Issue demonstration support
 
-This project is used as a support to demonstrate an issue encountered while using a WebView in some specific condition for a Flutter application
+This project is used as a support to demonstrate an issue encountered while using a WebView in some specific condition for a Flutter application (issue opened [here](https://github.com/flutter/flutter/issues/41988))
 
 ## Some context
 
